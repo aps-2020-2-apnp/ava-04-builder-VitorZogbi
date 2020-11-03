@@ -47,8 +47,9 @@ export class AlimentoBuilder {
     this._alimento = new Alimento('Marmita', 400, 343.3, 52.1, 9.6, 25.3, 0.145, 0.3, 0, 5.5)
   }
 
-  reset() {
-    this._alimento.constructor()
+  reset(): AlimentoBuilder {
+    this._alimento = new Alimento('Marmita', 400, 343.3, 52.1, 9.6, 25.3, 0.145, 0.3, 0, 5.5)
+    return this
   }
 
   descricao(descricao: string): AlimentoBuilder{
